@@ -1,6 +1,15 @@
-{% if section.settings.title != blank %}
-    <h2>{{ section.settings.title }}</h2>
-{% endif %}
+{% assign bg = section.settings.background %}
+{% assign txt_color = section.settings.color_text %}
+
+<div style="--bg: {{ bg }}; --txt-color: {{ txt_color }};" class="mi-cajita">
+    {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+    {% endif %}
+    
+    {% if section.settings.subtitle != blank %}
+        <h3>{{ section.settings.subtitle }}</h3>
+    {% endif %}
+</div>
 
 
 
@@ -19,6 +28,18 @@
             "id": "subtitle",
             "label": "Subtitle",
             "default": "Mi subtitulo"
+        },
+        {
+            "type": "color_background",
+            "id": "background",
+            "label": "Background",
+            "default": "linear-gradient(#ffffff, #000000)"
+        },
+        {
+            "type": "color",
+            "id": "color_text",
+            "label": "Color Text",
+            "default": "#ffffff"
         }
     ],
     "presets": [
