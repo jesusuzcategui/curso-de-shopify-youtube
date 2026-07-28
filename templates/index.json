@@ -9,12 +9,20 @@
  */
 {
   "sections": {
+    "mi_primera_seccion_LUfXMc": {
+      "type": "mi-primera-seccion",
+      "name": "Mi primera seccion",
+      "settings": {
+        "title": "Hola mundo"
+      }
+    },
     "main": {
       "type": "hello-world",
       "settings": {}
     }
   },
   "order": [
+    "mi_primera_seccion_LUfXMc",
     "main"
   ]
 }
