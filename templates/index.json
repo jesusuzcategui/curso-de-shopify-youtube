@@ -14,7 +14,9 @@
       "name": "Mi primera seccion",
       "settings": {
         "title": "Hola mundo",
-        "subtitle": "Estamos aprendiendo shopify"
+        "subtitle": "Estamos aprendiendo shopify",
+        "background": "linear-gradient(180deg, rgba(16, 81, 104, 1), rgba(30, 202, 227, 1) 100%)",
+        "color_text": "#ffffff"
       }
     },
     "main": {
