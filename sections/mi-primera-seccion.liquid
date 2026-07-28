@@ -1,0 +1,24 @@
+{% if section.settings.title != blank %}
+    <h2>{{ section.settings.title }}</h2>
+{% endif %}
+
+
+
+{% schema %}
+{
+    "name": "Mi primera seccion",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Mi titulo"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Mi primera seccion"
+        }
+    ]
+}
+{% endschema %}
