@@ -1,0 +1,50 @@
+{% liquid
+  assign products_data = section.settings.product_list
+  assign title = section.settings.title
+%}
+
+{% unless products_data.size == 0 %}
+
+    {% unless title == blank %}<h2 class="">{{ title }}</h2>{% endunless %}
+
+    <ul class="grid-products">
+        {% for prod in products_data %}
+            <li>
+                {% render 'product-card', item: prod %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endunless %}
+
+
+{% schema %}
+{
+    "name": "Grid Products",
+    "presets": [
+        {"name": "Grid Products"}
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section meta",
+            "info": "Aqui va haber informacion de la seccion"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Mis productos"
+        },
+        {
+            "type": "header",
+            "content": "Products",
+            "info": "Aqui se administran los productos"
+        },
+        {
+            "type": "product_list",
+            "id": "product_list",
+            "label": "Lista de productos"
+        }
+    ]
+}
+{% endschema %}
