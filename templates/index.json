@@ -22,10 +22,26 @@
     "main": {
       "type": "hello-world",
       "settings": {}
+    },
+    "main_grid_products_adWQrA": {
+      "type": "main-grid-products",
+      "name": "Grid Products",
+      "settings": {
+        "title": "Mis productos",
+        "product_list": [
+          "the-3p-fulfilled-snowboard",
+          "the-collection-snowboard-hydrogen",
+          "the-collection-snowboard-liquid",
+          "the-collection-snowboard-oxygen",
+          "the-compare-at-price-snowboard",
+          "the-complete-snowboard"
+        ]
+      }
     }
   },
   "order": [
     "mi_primera_seccion_LUfXMc",
-    "main"
+    "main",
+    "main_grid_products_adWQrA"
   ]
 }
