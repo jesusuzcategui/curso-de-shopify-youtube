@@ -1,0 +1,16 @@
+{% if prod.available %}
+
+    {% form 'product', prod, class: "add-to-cart__form" %}
+        {% if prod.variants.size > 1 %}
+        <select name="id" id="variant-id">
+            {% for variant in prod.variants %}
+                <option value="{{variant.id}}" {% if variant.id == product.first_available_variant.id %}selected{% endif %}>{{ variant.title }}</option>
+            {% endfor %}
+        </select>
+        {% else %}
+            <input type="hidden" name="id" value="{{ prod.first_available_variant.id }}">
+        {% endif %}
+        <button type="submit">Add to cart</button>
+    {% endform %}
+
+{% endif %}

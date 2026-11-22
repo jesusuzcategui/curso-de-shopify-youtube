@@ -3,8 +3,19 @@
 
 {% unless prod == nill %}
 <article class="product-card">
+    <figure style="width: 200px; ">
+        {% render "image", image: prod.featured_image %}
+    </figure>
     <header>
         <a href="{{ prod.url }}"><h3>{{ prod.title }}</h3></a>
     </header>
+
+    {% if prod.available %}
+        <p>{{ prod.price | money_with_currency }}</p>
+    {% else %}
+        <p>Producto sin stock</p>
+    {% endif %}
+
+    {% render 'add-to-cart', prod: prod %}
 </article>
 {% endunless %}

@@ -115,3 +115,17 @@ body {
 .shopify-section > .full-width {
   grid-column: 1 / -1;
 }
+
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 20px;
+}
+
+.product-card {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
